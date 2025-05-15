@@ -4,7 +4,7 @@ const jawaban = document.getElementById("jawaban");
 
 // Saat klik "Iya"
 iya.onclick = () => {
-  jawaban.textContent = "Yay! Mulai sekarang kita jadian yaa 😍💑";
+  jawaban.textContent = "Yay! Mulai sekarang kita jadian yaa 😍";
 };
 
 // Saat klik "Nggak"
