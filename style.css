@@ -1,0 +1,99 @@
+body {
+  margin: 0;
+  font-family: 'Comic Sans MS', cursive;
+  background: linear-gradient(135deg, #ffecd2, #fcb69f);
+  overflow: hidden;
+}
+
+.container {
+  position: relative;
+  text-align: center;
+  margin-top: 10vh;
+  background: white;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+  width: 90%;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+h1, p {
+  margin: 10px 0;
+}
+
+.love {
+  font-size: 1.6em;
+  color: crimson;
+  animation: pulse 2s infinite;
+}
+
+.tombol button {
+  font-size: 1.1em;
+  margin: 15px;
+  padding: 10px 25px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+#iya {
+  background-color: #ff4081;
+  color: white;
+}
+
+#tidak {
+  background-color: #ccc;
+  color: black;
+  position: relative;
+}
+
+#iya:hover, #tidak:hover {
+  transform: scale(1.1);
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+}
+
+.fade-in {
+  opacity: 0;
+  animation: fadeIn ease 1 forwards;
+}
+
+.delay-1 { animation-delay: 0.5s; }
+.delay-2 { animation-delay: 1s; }
+.delay-3 { animation-delay: 1.5s; }
+.delay-4 { animation-delay: 2s; }
+.delay-5 { animation-delay: 2.5s; }
+
+@keyframes fadeIn {
+  to { opacity: 1; transform: translateY(0); }
+  from { opacity: 0; transform: translateY(20px); }
+}
+
+/* Love rain effect */
+.hujan-love {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+}
+
+.hujan-love::before {
+  content: "💖💘💝💕💞";
+  font-size: 24px;
+  position: absolute;
+  animation: jatuh 10s linear infinite;
+}
+
+@keyframes jatuh {
+  0% { transform: translateY(-100px) rotate(0); }
+  100% { transform: translateY(100vh) rotate(360deg); }
+}
